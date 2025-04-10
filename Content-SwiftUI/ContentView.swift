@@ -9,16 +9,30 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        VStack(spacing: 30) {
+                    CustomContainer {
+                        Text("👋 नमस्ते! यह मुख्य कंटेंट है")
+                            .font(.title2)
+                            .foregroundColor(.black)
+                    }
+
+                    CustomContainer {
+                        VStack {
+                            Text("🌟 दूसरा कंटेंट")
+                            Image(systemName: "star.fill")
+                                .foregroundColor(.yellow)
+                        }
+                    }
+                }
+                .padding()
     }
 }
 
 #Preview {
     ContentView()
 }
+
+
+
+
+
